@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Cat = () => {
   return (
-    <img className="cat" src="./cat.png" />
+    <img alt="friendly cat" className="cat" src="./cat.png" />
   );
 }
 

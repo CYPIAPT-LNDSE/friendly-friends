@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ResponseOption from './ResponseOption.js';
 
 const Message = (props) => {
