@@ -19,8 +19,9 @@ body {
 }
 
 .cat {
-  display: block;
-  margin: 30px auto;
+  position: fixed;
+  top: 310px;
+  left: 75px;
   width: 200px;
   height: 200px;
   /*-webkit-box-shadow: 10px 100px 121px 0px rgba(0,0,0,0.75);
@@ -66,4 +67,18 @@ body {
   padding: 10px;
   margin: 100px auto;
   width: auto;
+}
+
+.message:after {
+  content: '';
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 25px;
+  left: -30px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
 }
