@@ -1,9 +1,9 @@
-import Menu from './Menu.js'
-import Cat from './Cat.js'
-import Message from './Message.js'
+import Menu from './Menu.js';
+import Cat from './Cat.js';
+import Message from './Message.js';
 
 import React, { Component } from 'react';
-import './App.css';
+import '../styles/App.css';
 
 class App extends Component {
   render() {
