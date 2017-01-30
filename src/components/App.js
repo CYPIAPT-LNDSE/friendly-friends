@@ -8,7 +8,7 @@ import '../styles/App.css';
 class App extends Component {
   constructor() {
     super();
-    this.options = ["I want to cry", "I feel ok"];
+    this.options = ["😔 I want to cry", "🙂 I feel ok"];
   }
   render() {
     return (
