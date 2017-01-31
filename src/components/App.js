@@ -8,12 +8,19 @@ import '../styles/App.css';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = { message: false }
+    this.showMessage = this.showMessage.bind(this);
   }
+
+  showMessage () {
+    this.setState({ message: true })
+  };
+
   render() {
     return (
       <div className='container'>
-        <Menu />
-        <Message/>
+        <Menu showMessage={this.showMessage} state={this.state} />
+        {this.state.message ? <Message/> : null}
         <Cat />
       </div>
     );
