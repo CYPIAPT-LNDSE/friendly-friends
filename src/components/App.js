@@ -19,14 +19,14 @@ class App extends Component {
       play: (e) => console.log('play'),
       talk: () => this.setState({ message: true })
     };
-    
+
     obj[label]()
   };
 
   render() {
     return (
       <div className='container'>
-        <Menu handleEvent={this.handleEvent} state={this.state} />
+        <Menu handleEvent={ this.handleEvent } />
         {this.state.message ? <Message/> : null}
         <Cat />
       </div>
