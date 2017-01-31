@@ -8,26 +8,26 @@ import '../styles/App.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { message: false }
+    this.state = { message: false };
     this.handleEvent = this.handleEvent.bind(this);
   }
 
-  handleEvent (label) {
-    const obj = {
-      stroke: (e) => console.log('stroke'),
-      feed: (e) => console.log('feed'),
-      play: (e) => console.log('play'),
+  handleEvent (action) {
+    const handlers = {
+      stroke: () => console.log('stroke'),
+      feed: () => console.log('feed'),
+      play: () => console.log('play'),
       talk: () => this.setState({ message: true })
     };
 
-    obj[label]()
-  };
+    handlers[action]();
+  }
 
   render() {
     return (
       <div className='container'>
         <Menu handleEvent={ this.handleEvent } />
-        {this.state.message ? <Message/> : null}
+        {this.state.message && <Message/>}
         <Cat />
       </div>
     );
