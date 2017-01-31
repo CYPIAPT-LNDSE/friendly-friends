@@ -1,27 +1,6 @@
 import React from 'react';
 import ResponseOption from './ResponseOption.js';
-
-const convo = {
-  1: {
-    text: 'Hi! how are you feeling',
-    responses: [
-      { text: 'I feel sad', next: 2 },
-      { text: 'I am happy!', next: 3}
-    ]
-  },
-  2: {
-    text: 'Why are you sad',
-    responses: [
-      { text: 'I don\'t know', next: 3}
-    ]
-  },
-  3: {
-    text: 'Great, me too!',
-    responses: [
-      { text: 'I don\'t know', next: 3}
-    ]
-  }
-};
+import convo from '../resources/conversation.json';
 
 class Message extends React.Component {
   constructor(props) {
