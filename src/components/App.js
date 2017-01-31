@@ -6,15 +6,14 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.options = ["😔 I want to cry", "🙂 I feel ok"];
+  constructor(props) {
+    super(props);
   }
   render() {
     return (
-      <div className="container">
+      <div className='container'>
         <Menu />
-        <Message text="Hi! How are you feeling today?" options={this.options}/>
+        <Message/>
         <Cat />
       </div>
     );
