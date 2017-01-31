@@ -1,0 +1,25 @@
+exports[`test Menu renders correctly 1`] = `
+<header
+  className="menu">
+  <button
+    className="button"
+    onClick={[Function]}>
+    stroke
+  </button>
+  <button
+    className="button"
+    onClick={[Function]}>
+    talk
+  </button>
+  <button
+    className="button"
+    onClick={[Function]}>
+    feed
+  </button>
+  <button
+    className="button"
+    onClick={[Function]}>
+    play
+  </button>
+</header>
+`;

@@ -1,0 +1,6 @@
+exports[`test Cat renders correctly 1`] = `
+<img
+  alt="friendly cat"
+  className="cat"
+  src="./cat.png" />
+`;

@@ -1,0 +1,15 @@
+exports[`test ResponseOption renders correctly 1`] = `
+<p
+  className="response-option"
+  onClick={[Function]}>
+  hello
+</p>
+`;
+
+exports[`test Updating ResponseOption works correctly 1`] = `
+<p
+  className="response-option"
+  onClick={[Function]}>
+  hello
+</p>
+`;
