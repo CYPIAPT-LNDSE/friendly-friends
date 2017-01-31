@@ -1,0 +1,18 @@
+exports[`test Message renders correctly 1`] = `
+<div
+  className="message">
+  <p>
+    Hi! how are you feeling
+  </p>
+  <p
+    className="response-option"
+    onClick={[Function]}>
+    I feel sad
+  </p>
+  <p
+    className="response-option"
+    onClick={[Function]}>
+    I am happy!
+  </p>
+</div>
+`;

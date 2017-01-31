@@ -1,0 +1,21 @@
+exports[`test Menu renders correctly 1`] = `
+<header
+  className="menu">
+  <button
+    className="button">
+    stroke
+  </button>
+  <button
+    className="button">
+    talk
+  </button>
+  <button
+    className="button">
+    feed
+  </button>
+  <button
+    className="button">
+    play
+  </button>
+</header>
+`;
