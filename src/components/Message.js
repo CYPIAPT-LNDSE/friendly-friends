@@ -18,9 +18,10 @@ class Message extends React.Component {
     return (
       <div className="message">
         <p>{conversation.text}</p>
-        {conversation.responses.map(response =>
+        {conversation.responses.map((response, i) =>
           <ResponseOption updateMessage={this.updateMessage}
-                          response={response} />
+                          response={response}
+                          key={i} />
         )}
       </div>
     );
