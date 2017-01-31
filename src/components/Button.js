@@ -1,14 +1,8 @@
 import React from 'react';
 
-const obj = {
-  stroke: (e) => console.log('stroke'),
-  feed: (e) => console.log('feed'),
-  play: (e) => console.log('play')
-}
-
-const Button = (props) => {
+const Button = ({ label, handleEvent }) => {
   return (
-    <button onClick={props.showMessage} className="button">{props.label}</button>
+    <button onClick={() => handleEvent(label)} className="button">{label}</button>
   );
 }
 

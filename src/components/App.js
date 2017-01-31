@@ -9,17 +9,24 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { message: false }
-    this.showMessage = this.showMessage.bind(this);
+    this.handleEvent = this.handleEvent.bind(this);
   }
 
-  showMessage () {
-    this.setState({ message: true })
+  handleEvent (label) {
+    const obj = {
+      stroke: (e) => console.log('stroke'),
+      feed: (e) => console.log('feed'),
+      play: (e) => console.log('play'),
+      talk: () => this.setState({ message: true })
+    };
+    
+    obj[label]()
   };
 
   render() {
     return (
       <div className='container'>
-        <Menu showMessage={this.showMessage} state={this.state} />
+        <Menu handleEvent={this.handleEvent} state={this.state} />
         {this.state.message ? <Message/> : null}
         <Cat />
       </div>
