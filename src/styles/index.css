@@ -9,6 +9,7 @@ body {
 .container {
   width: 320px;
   height: 568px;
+  position: relative;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2989d8+0,1e5799+62,207cca+62,c1a666+62,70592b+62,b29f62+100 */
   background: #2989d8; /* Old browsers */
   background: -moz-linear-gradient(top,  #2989d8 0%, #1e5799 62%, #207cca 62%, #c1a666 62%, #70592b 62%, #b29f62 100%); /* FF3.6-15 */
@@ -103,4 +104,29 @@ body {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid white;
+}
+
+.callToAction {
+  width: 300px;
+  height: 548px;
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+}
+
+.ctaImage {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  border-radius: 8px;
+  border: 2px solid black;
+  display: block;
 }

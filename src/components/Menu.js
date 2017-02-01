@@ -11,6 +11,6 @@ const Menu = (props) => {
       <Button {...props} label="play" />
     </header>
   );
-}
+};
 
 export default Menu;

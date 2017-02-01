@@ -1,33 +1,19 @@
-import Menu from './Menu.js';
+import React, { Component } from 'react';
+
+import Menu from '../containers/MenuContainer.js';
 import Cat from './Cat.js';
 import Message from './Message.js';
-
-import React, { Component } from 'react';
+import CallToAction from './CallToAction.js';
 import '../styles/App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { message: false };
-    this.handleEvent = this.handleEvent.bind(this);
-  }
-
-  handleEvent (action) {
-    const handlers = {
-      stroke: () => console.log('stroke'),
-      feed: () => console.log('feed'),
-      play: () => console.log('play'),
-      talk: () => this.setState({ message: true })
-    };
-
-    handlers[action]();
-  }
-
   render() {
+    const { message, callToAction, updateMessage } = this.props;
     return (
       <div className='container'>
-        <Menu handleEvent={ this.handleEvent } />
-        {this.state.message && <Message/>}
+        {callToAction && <CallToAction {...callToAction} updateMessage={updateMessage}/>}
+        <Menu />
+        {message && <Message message={message} updateMessage={updateMessage}/>}
         <Cat />
       </div>
     );
