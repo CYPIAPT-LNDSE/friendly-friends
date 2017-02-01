@@ -6,7 +6,7 @@ class Message extends React.Component {
     const { message, updateMessage } = this.props;
     return (
       <div className="message">
-        <p>{message.text}</p>
+        <p className="question">{message.text}</p>
         {message.responses.map((response, key) =>
           <ResponseOption updateMessage={ updateMessage }
                           response={ response }
