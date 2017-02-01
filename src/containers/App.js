@@ -4,12 +4,12 @@ import actions from "../actions";
 
 const mapStateToProps = (state) => {
   let callToAction, message = null;
-  switch(state.currentState.status) {
+  switch(state.action.status) {
     case "message":
-      message = state.messages[state.currentState.value];
+      message = state.messages[state.action.value];
       break;
     case "cta":
-      callToAction = state.ctas[state.currentState.value];
+      callToAction = state.callToAction[state.action.value];
       break;
     default:
       break;
@@ -23,7 +23,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     updateMessage: ({ action, value }) => {
-      dispatch(actions.setCurrentState(action, value));
+      dispatch(actions.setAction(action, value));
     }
   }
 }

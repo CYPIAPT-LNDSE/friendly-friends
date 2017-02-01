@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import * as actions from "../actions";
 import model from "../resources/model.js";
 
-const currentStateReducer = (state = { status: "idle", value: "" }, action) => {
+const actionReducer = (state = { status: "idle", value: "" }, action) => {
   switch (action.type) {
     case actions.SET_CURRENT_STATE:
     case actions.INITIATE_CONVERSATION:
@@ -28,8 +28,8 @@ const ctasReducer = (state = model.ctas, action) => {
 }
 
 const rootReducer = combineReducers({
-  currentState: currentStateReducer,
-  ctas: ctasReducer,
+  action: actionReducer,
+  callToAction: ctasReducer,
   messages: messagesReducer
 });
 

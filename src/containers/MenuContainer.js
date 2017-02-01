@@ -8,8 +8,14 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleEvent: (event) => {
-      dispatch(actions.initiateConversation());
+    handleEvent: (label) => {
+      switch(label) {
+        case 'talk':
+          dispatch(actions.initiateConversation());
+          break;
+        default:
+          return;
+      }
     }
   };
 };

@@ -9,7 +9,7 @@ class CallToAction extends React.Component {
   }
 
   render() {
-    let { imgSrc, ctaText, ctaURL, ctaLinkText } = this.props.value
+    let { imgSrc, ctaText, ctaURL, ctaLinkText } = this.props
     return (
       <div className="callToAction">
         <p onClick={() => this.handleClick()} >X</p>
