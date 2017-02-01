@@ -4,6 +4,10 @@ class CallToAction extends React.Component {
   constructor(props) {
     super(props);
   }
+  handleClick () {
+    this.props.updateMessage({ state: "idle", value: "" })
+  }
+
   render() {
     let imgSrc = "./cat.png";
     let ctaText = "It sounds like you're feeling anxious. CAMHS can help you find out what to do next.";
@@ -11,6 +15,7 @@ class CallToAction extends React.Component {
     let ctaLinkText = "Visit CAMHS";
     return (
       <div className="callToAction">
+        <p onClick={() => this.handleClick()} >X</p>
         <img src={imgSrc} className="ctaImage"/>
         <p>{ctaText}</p>
         <a href={ctaURL}>{ctaLinkText}</a>

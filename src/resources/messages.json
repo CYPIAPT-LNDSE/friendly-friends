@@ -15,7 +15,7 @@
   "3": {
     "text": "Great, me too!",
     "responses": [
-      { "text": "Excellent!", "action": "end" }
+      { "text": "Excellent!", "action": "idle", "value": "" }
     ]
   }
 }

@@ -12,6 +12,8 @@ const currentStateReducer = (state = { status: "idle", value: "" }, action) => {
       };
     case actions.MAKE_RESPONSE:
       return Object.assign({}, state, { value: action.value });
+    case actions.END_CONVERSATION:
+      return { status: "idle", value: "" };
     default:
       return state;
   }

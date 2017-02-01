@@ -15,7 +15,7 @@ class App extends Component {
     const { message, callToAction, updateMessage } = this.props;
     return (
       <div className='container'>
-        {callToAction && <CallToAction value={callToAction}/>}
+        {callToAction && <CallToAction value={callToAction} updateMessage={updateMessage}/>}
         <Menu />
         {message && <Message message={message} updateMessage={updateMessage}/>}
         <Cat />
