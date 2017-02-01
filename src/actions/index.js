@@ -1,4 +1,3 @@
-import model from "../resources/model.js";
 
 export const SET_CURRENT_STATE = "SET_CURRENT_STATE";
 export const INITIATE_CONVERSATION = "INITIATE_CONVERSATION";

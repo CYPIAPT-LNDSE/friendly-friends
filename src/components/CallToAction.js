@@ -1,9 +1,7 @@
 import React from 'react';
 
 class CallToAction extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   handleClick () {
     this.props.updateMessage({ state: "idle", value: "" })
   }
@@ -13,7 +11,7 @@ class CallToAction extends React.Component {
     return (
       <div className="callToAction">
         <p onClick={() => this.handleClick()} >X</p>
-        <img src={imgSrc} className="ctaImage"/>
+        <img alt="Call to action" src={imgSrc} className="ctaImage"/>
         <p>{ctaText}</p>
         <a href={ctaURL}>{ctaLinkText}</a>
       </div>

@@ -7,10 +7,6 @@ import CallToAction from './CallToAction.js';
 import '../styles/App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { message, callToAction, updateMessage } = this.props;
     return (
