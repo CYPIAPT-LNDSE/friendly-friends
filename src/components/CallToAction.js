@@ -9,10 +9,7 @@ class CallToAction extends React.Component {
   }
 
   render() {
-    let imgSrc = "./cat.png";
-    let ctaText = "It sounds like you're feeling anxious. CAMHS can help you find out what to do next.";
-    let ctaURL = "http://www.youngminds.org.uk/for_parents/services_children_young_people/camhs";
-    let ctaLinkText = "Visit CAMHS";
+    let { imgSrc, ctaText, ctaURL, ctaLinkText } = this.props.value
     return (
       <div className="callToAction">
         <p onClick={() => this.handleClick()} >X</p>
