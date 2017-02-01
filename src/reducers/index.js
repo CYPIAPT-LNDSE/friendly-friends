@@ -1,22 +1,29 @@
 import { combineReducers } from "redux";
+import * as actions from "../actions";
+import model from "../resources/model.js";
 
 const currentStateReducer = (state = { status: "idle", value: "" }, action) => {
   switch (action.type) {
-    case "setCurrentState":
+    case actions.SET_CURRENT_STATE:
+    case actions.INITIATE_CONVERSATION:
       return {
         status: action.status,
         value: action.value
       };
-      break;
+    case actions.MAKE_RESPONSE:
+      return Object.assign({}, state, { value: action.value });
     default:
-      return state
+      return state;
   }
-}
+};
 
-const value = (state, action) => {}
+const messagesReducer = (state = model.messages, action) => {
+  return state;
+};
 
 const rootReducer = combineReducers({
-  currentState: currentStateReducer
+  currentState: currentStateReducer,
+  messages: messagesReducer
 });
 
 // set current state

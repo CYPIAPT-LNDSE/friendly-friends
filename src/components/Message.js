@@ -1,24 +1,20 @@
 import React from 'react';
 import ResponseOption from './ResponseOption.js';
-import convo from '../resources/conversation.json';
 
 class Message extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      conversation: convo[1]
-    };
     this.updateMessage = this.updateMessage.bind(this);
   }
   updateMessage(next) {
-    this.setState({ conversation: convo[next] });
+    // TODO - dispatch action here
   }
   render() {
-    const { conversation } = this.state;
+    const { message } = this.props;
     return (
       <div className="message">
-        <p>{conversation.text}</p>
-        {conversation.responses.map((response, i) =>
+        <p>{message.text}</p>
+        {message.responses.map((response, i) =>
           <ResponseOption updateMessage={this.updateMessage}
                           response={response}
                           key={i} />
