@@ -4,10 +4,7 @@ import { connect } from 'react-redux';
 
 
 const mapStateToProps = (state) => {
-  return {
-    callToAction: state.currentState === "callToAction",
-    message: state.currentState === "message"
-  }
+  return state.currentState
 }
 
 export default connect(mapStateToProps)(App);

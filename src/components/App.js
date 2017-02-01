@@ -29,9 +29,9 @@ class App extends Component {
 
     return (
       <div className='container'>
-        {this.props.callToAction && <CallToAction/>}
+        {this.props.status === "callToAction" && <CallToAction/>}
         <Menu handleEvent={ this.handleEvent } />
-        {this.props.message && <Message/>}
+        {this.props.status === "message" && <Message/>}
         <Cat />
       </div>
     );
