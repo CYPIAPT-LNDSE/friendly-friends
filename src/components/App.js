@@ -10,14 +10,14 @@ class App extends Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
-    const { message, callToAction } = this.props;
+    const { message, callToAction, updateMessage } = this.props;
     return (
       <div className='container'>
         {callToAction && <CallToAction value={callToAction}/>}
         <Menu />
-        {message && <Message message={message}/>}
+        {message && <Message message={message} updateMessage={updateMessage}/>}
         <Cat />
       </div>
     );

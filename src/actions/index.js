@@ -15,7 +15,7 @@ function setCurrentState(newState, value) {
 function initiateConversation() {
   return {
     type: INITIATE_CONVERSATION,
-    status: "talking",
+    status: "message",
     value: 1
   };
 }

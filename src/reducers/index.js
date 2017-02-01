@@ -21,8 +21,13 @@ const messagesReducer = (state = model.messages, action) => {
   return state;
 };
 
+const ctasReducer = (state = model.ctas, action) => {
+  return state;
+}
+
 const rootReducer = combineReducers({
   currentState: currentStateReducer,
+  ctas: ctasReducer,
   messages: messagesReducer
 });
 

@@ -1,14 +1,15 @@
 import App from '../components/App.js';
 import { connect } from 'react-redux';
+import actions from "../actions";
 
 const mapStateToProps = (state) => {
   let callToAction, message = null;
   switch(state.currentState.status) {
-    case "talking":
+    case "message":
       message = state.messages[state.currentState.value];
       break;
-    case "callToAction":
-      callToAction = state.callToAction[state.currentState.value];
+    case "cta":
+      callToAction = state.ctas[state.currentState.value];
       break;
     default:
       break;
@@ -19,4 +20,12 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateMessage: ({ action, value }) => {
+      dispatch(actions.setCurrentState(action, value));
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
