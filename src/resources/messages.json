@@ -3,12 +3,12 @@
     "text": "Hey! how are you feeling today?",
     "responses": [
       { "text": "I'm feeling pretty good! 😀", "action": "message", "value": "2" },
-      { "text": "I feel a bit nervous 😟", "action": "message", "value": "3" },
-      { "text": "I feel sad 😞", "action": "message", "value": "9" }
+      { "text": "I feel a bit nervous. 😟", "action": "message", "value": "3" },
+      { "text": "I feel sad. 😞", "action": "message", "value": "9" }
     ]
   },
   "2": {
-    "text": "Awesome 😃! Well let me know if you want to chat again",
+    "text": "Awesome! 😃 Well let me know if you want to chat again.",
     "responses": [
       { "text": "OK", "action": "idle", "value": null }
     ]
@@ -35,43 +35,43 @@
     ]
   },
   "6": {
-    "text": "Amazing! Press one of the buttons at the top of the screen and we can play",
+    "text": "Amazing! Press one of the buttons at the top of the screen and we can play.",
     "responses": [
       { "text": "OK", "action": "idle", "value": null }
     ]
   },
   "7": {
-    "text": "It's ok to feel anxious or nervous sometimes, I know what it feels like! If you like, we could play a game?",
+    "text": "It's OK to feel anxious or nervous sometimes. I know what it feels like! If you like, we could play a game?",
     "responses": [
       { "text": "OK, let's play!", "action": "message", "value": "6" },
-      { "text": "No thanks", "action": "message", "value": "8" }
+      { "text": "No, thanks.", "action": "message", "value": "8" }
     ]
   },
   "8": {
     "text": "OK, well I'm going to have a rest now. Let me know if you want to chat again!",
     "responses": [
-      { "text": "OK", "action": "idle", "value": null }
+      { "text": "OK!", "action": "idle", "value": null }
     ]
   },
   "9": {
     "text": "I'm sorry to hear that. How sad would you say you are?",
     "responses": [
-      { "text": "I feel really sad", "action": "message", "value": "10" },
-      { "text": "Just a little bit sad", "action": "message", "value": "11" }
+      { "text": "Really sad.", "action": "message", "value": "10" },
+      { "text": "Just a little bit sad.", "action": "message", "value": "11" }
     ]
   },
   "10": {
-    "text": "Oh wow! And do you feel like a lot?",
+    "text": "Oh wow! Do you feel like a lot?",
     "responses": [
-      { "text": "Yeah, lots of the time", "action": "cta", "value": "depression" },
-      { "text": "Now and then", "action": "message", "value": "11" }
+      { "text": "Yeah, lots of the time.", "action": "cta", "value": "depression" },
+      { "text": "Now and then.", "action": "message", "value": "11" }
     ]
   },
   "11": {
-    "text": "Well, it sounds like we might be able to cheer you up then! I know a really good game we could play",
+    "text": "Well, it sounds like we might be able to cheer you up then! I know a really good game we could play.",
     "responses": [
       { "text": "That sounds fun!", "action": "message", "value": "6" },
-      { "text": "I don't really want to", "action": "message", "value": "8" }
+      { "text": "I don't really want to.", "action": "message", "value": "8" }
     ]
   }
 }
