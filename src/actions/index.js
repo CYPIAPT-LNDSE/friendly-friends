@@ -1,4 +1,3 @@
-
 export const SET_CURRENT_STATE = "SET_CURRENT_STATE";
 export const INITIATE_CONVERSATION = "INITIATE_CONVERSATION";
 export const SET_USER_NAME = "SET_USER_NAME"
@@ -27,9 +26,13 @@ function setUsername(value) {
   };
 }
 
+function startPlaying() {
+  return setAction("playing", null);
+}
 
 export default {
   setAction,
   initiateConversation,
-  setUsername
+  setUsername,
+  startPlaying
 };

@@ -1,10 +1,11 @@
-import App from '../components/App.js';
-import { connect } from 'react-redux';
+import App from "../components/App.js";
+import { connect } from "react-redux";
 import actions from "../actions";
 
 const mapStateToProps = (state) => {
-  let callToAction, message = null, welcome = false;
-  let username = state.action.username
+  let callToAction, message = null, welcome = false, isPlaying = null;
+  let username = state.action.username;
+
   switch(state.action.status) {
     case "message":
       message = state.messages[state.action.value];
@@ -15,6 +16,9 @@ const mapStateToProps = (state) => {
     case "welcome":
       welcome = true;
       break;
+    case "playing":
+      isPlaying = true;
+      break;
     default:
       break;
   }
@@ -22,7 +26,8 @@ const mapStateToProps = (state) => {
     message,
     callToAction,
     welcome,
-    username
+    username,
+    isPlaying
   };
 };
 
@@ -37,7 +42,7 @@ const mapDispatchToProps = (dispatch) => {
     setUsername: (value) => {
       dispatch(actions.setUsername(value));
     }
-  }
-}
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
