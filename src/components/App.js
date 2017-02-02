@@ -4,6 +4,7 @@ import Menu from "../containers/MenuContainer.js";
 import Cat from "./Cat.js";
 import Message from "./Message.js";
 import CallToAction from "./CallToAction.js";
+import WelcomeScreen from "./WelcomeScreen.js"
 import Ball from "./Ball.js";
 import "../styles/App.css";
 
@@ -28,13 +29,15 @@ class App extends Component {
     window.clearTimeout(this.state.timeoutID);
   }
   render() {
-    const { message, callToAction, updateMessage, isPlaying, initiateConversation } = this.props;
+    const { message, callToAction, updateMessage, isPlaying, initiateConversation, welcome, setUsername, username } = this.props;
     const { isBouncing } = this.state;
+
     return (
-      <div className="container">
+      <div className='container'>
+        {welcome && <WelcomeScreen setUsername={setUsername} />}
         {callToAction && <CallToAction {...callToAction} updateMessage={updateMessage}/>}
         <Menu />
-        {message && <Message message={message} updateMessage={updateMessage}/>}
+        {message && <Message username={username} message={message} updateMessage={updateMessage}/>}
         <Cat isBouncing={isBouncing} initiateConversation={initiateConversation}/>
         {isPlaying && <Ball isBouncing={isBouncing} handleClick={this.makeBounce}/>}
       </div>
