@@ -9,7 +9,6 @@ class WelcomeScreen extends React.Component {
 
     handleSubmit (e) {
       e.preventDefault();
-      console.log(this.input.value);
       this.props.setUsername(this.input.value);
     }
 
