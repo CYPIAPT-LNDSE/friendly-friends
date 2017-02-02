@@ -28,6 +28,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     updateMessage: ({ action, value }) => {
       dispatch(actions.setAction(action, value));
+    },
+    initiateConversation: (value) => {
+      dispatch(actions.initiateConversation(value));
     }
   };
 };

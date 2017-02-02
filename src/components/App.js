@@ -24,14 +24,14 @@ class App extends Component {
     }, 1000);
   }
   render() {
-    const { message, callToAction, updateMessage, isPlaying } = this.props;
+    const { message, callToAction, updateMessage, isPlaying, initiateConversation } = this.props;
     const { isBouncing } = this.state;
     return (
       <div className="container">
         {callToAction && <CallToAction {...callToAction} updateMessage={updateMessage}/>}
         <Menu />
         {message && <Message message={message} updateMessage={updateMessage}/>}
-        <Cat isBouncing={isBouncing}/>
+        <Cat isBouncing={isBouncing} initiateConversation={initiateConversation}/>
         {isPlaying && <Ball isBouncing={isBouncing} handleClick={this.makeBounce}/>}
       </div>
     );

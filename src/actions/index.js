@@ -9,11 +9,11 @@ function setAction(newState, value) {
   };
 }
 
-function initiateConversation() {
+function initiateConversation(value) {
   return {
     type: INITIATE_CONVERSATION,
     status: "message",
-    value: 1
+    value: value
   };
 }
 
