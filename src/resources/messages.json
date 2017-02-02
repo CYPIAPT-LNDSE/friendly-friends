@@ -73,5 +73,11 @@
       { "text": "That sounds fun!", "action": "message", "value": "6" },
       { "text": "I don't really want to", "action": "message", "value": "8" }
     ]
+  },
+  "12": {
+    "text": "Meeowww",
+    "responses": [
+      { "text": "awww", "action": "idle", "value": null }
+    ]
   }
 }
