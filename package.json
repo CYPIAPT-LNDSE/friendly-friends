@@ -2,6 +2,7 @@
   "name": "freud-prototype",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://https://cypiapt-lndse.github.io/friendly-friends/",
   "devDependencies": {
     "react-scripts": "0.8.5"
   },
