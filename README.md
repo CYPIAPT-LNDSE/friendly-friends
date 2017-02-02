@@ -20,6 +20,8 @@ For this prototype there are only three ways to interact with the cat, but our i
 
 The app is currently an early prototype designed to demonstrate the concept. Our roadmap for development into a minimum viable product (MVP) is as follows:
 
+* Full mobile support
+
 * Improve animations and design
 
 * Increase the number of interactions you can have with the cat

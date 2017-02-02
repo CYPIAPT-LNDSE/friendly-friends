@@ -1,11 +1,11 @@
 {
   "1": {
-    "text": "Hey! how are you feeling today?",
+    "text": "Hey! How are you feeling today?",
     "responses": [
-      { "text": "I'm feeling pretty good! 😀", "action": "message", "value": "2" },
-      { "text": "I feel a bit nervous 😟", "action": "message", "value": "3" },
-      { "text": "I feel sad 😞", "action": "message", "value": "9" },
-      { "text": "I find it hard to make friends", "action": "message", "value": "13" }
+      { "text": "😀 I'm feeling pretty good!", "action": "message", "value": "2" },
+      { "text": "😟 I feel a bit nervous", "action": "message", "value": "3" },
+      { "text": "😞 I feel sad", "action": "message", "value": "9" },
+      { "text": "🙍 I find it hard to make friends", "action": "message", "value": "13" }
     ]
   },
   "2": {

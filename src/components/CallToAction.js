@@ -9,9 +9,9 @@ class CallToAction extends React.Component {
   render() {
     let { imgSrc, ctaText, ctaURL, ctaLinkText } = this.props
     return (
-      <div className="callToAction">
-        <p onClick={() => this.handleClick()} >X</p>
-        <img alt="Call to action" src={imgSrc} className="ctaImage"/>
+      <div className="modal callToAction">
+        <p className="callToAction--button" onClick={() => this.handleClick()} >X</p>
+        <img alt="Call to action" src={imgSrc} className="modal--image"/>
         <p>{ctaText}</p>
         <a href={ctaURL}>{ctaLinkText}</a>
       </div>
