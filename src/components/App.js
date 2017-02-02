@@ -9,13 +9,13 @@ import '../styles/App.css';
 
 class App extends Component {
   render() {
-    const { message, callToAction, updateMessage, initiateConversation, welcome } = this.props;
+    const { message, callToAction, updateMessage, initiateConversation, welcome, setUsername, username } = this.props;
     return (
       <div className='container'>
-        {welcome && <WelcomeScreen />}
+        {welcome && <WelcomeScreen setUsername={setUsername} />}
         {callToAction && <CallToAction {...callToAction} updateMessage={updateMessage}/>}
         <Menu />
-        {message && <Message message={message} updateMessage={updateMessage}/>}
+        {message && <Message username={username} message={message} updateMessage={updateMessage}/>}
         <Cat initiateConversation={initiateConversation} />
       </div>
     );

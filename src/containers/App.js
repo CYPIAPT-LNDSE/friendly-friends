@@ -4,6 +4,7 @@ import actions from "../actions";
 
 const mapStateToProps = (state) => {
   let callToAction, message = null, welcome = false;
+  let username = state.action.username
   switch(state.action.status) {
     case "message":
       message = state.messages[state.action.value];
@@ -20,7 +21,8 @@ const mapStateToProps = (state) => {
   return {
     message,
     callToAction,
-    welcome
+    welcome,
+    username
   };
 };
 
@@ -31,6 +33,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     initiateConversation: (value) => {
       dispatch(actions.initiateConversation(value));
+    },
+    setUsername: (value) => {
+      dispatch(actions.setUsername(value));
     }
   }
 }
