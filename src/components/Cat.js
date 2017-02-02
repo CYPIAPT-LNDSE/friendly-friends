@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Cat = () => {
+const Cat = ({ initiateConversation }) => {
   return (
-    <img alt="friendly cat" className="cat" src="./cat.png" />
+    <img onClick={() => initiateConversation(12)} alt="friendly cat" className="cat" src="./cat.png" />
   );
 }
 

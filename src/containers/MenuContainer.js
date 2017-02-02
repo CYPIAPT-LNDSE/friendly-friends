@@ -11,7 +11,7 @@ const mapDispatchToProps = (dispatch) => {
     handleEvent: (label) => {
       switch(label) {
         case 'talk':
-          dispatch(actions.initiateConversation());
+          dispatch(actions.initiateConversation(1));
           break;
         default:
           return;

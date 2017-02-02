@@ -5,6 +5,7 @@ class Message extends React.Component {
   render() {
     const { message, updateMessage } = this.props;
     return (
+      <div className="message-container">
       <div className="message">
         <p className="question">{message.text}</p>
         {message.responses.map((response, key) =>
@@ -12,6 +13,7 @@ class Message extends React.Component {
                           response={ response }
                           key={ key } />
         )}
+      </div>
       </div>
     );
   }
