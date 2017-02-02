@@ -76,7 +76,7 @@
     ]
   },
   "12": {
-    "text": "Meeowww",
+    "text": "Meowww hello {username}",
     "responses": [
       { "text": "awww", "action": "idle", "value": null }
     ]

@@ -3,13 +3,18 @@ import { connect } from "react-redux";
 import actions from "../actions";
 
 const mapStateToProps = (state) => {
-  let callToAction, message, isPlaying = null;
+  let callToAction, message = null, welcome = false, isPlaying = null;
+  let username = state.action.username;
+
   switch(state.action.status) {
     case "message":
       message = state.messages[state.action.value];
       break;
     case "cta":
       callToAction = state.callToAction[state.action.value];
+      break;
+    case "welcome":
+      welcome = true;
       break;
     case "playing":
       isPlaying = true;
@@ -20,6 +25,8 @@ const mapStateToProps = (state) => {
   return {
     message,
     callToAction,
+    welcome,
+    username,
     isPlaying
   };
 };
@@ -31,6 +38,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     initiateConversation: (value) => {
       dispatch(actions.initiateConversation(value));
+    },
+    setUsername: (value) => {
+      dispatch(actions.setUsername(value));
     }
   };
 };
