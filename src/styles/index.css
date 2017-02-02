@@ -1,3 +1,5 @@
+/* -- Layout and background -- */
+
 body {
   width: 100%;
   height: 100%;
@@ -19,15 +21,58 @@ body {
   text-align: center;
 }
 
+.background-stripes {
+  background: url('../../public/lines_floor.png');
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  height: 200px;
+}
+
+/* -- Welcome screen -- */
+
+.welcomeScreen {
+  width: 300px;
+  height: 548px;
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+}
+
+.welcomeImage {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  border-radius: 8px;
+  border: 2px solid black;
+  display: block;
+}
+
+.welcomeInput {
+  font-size: 2em;
+  width: 250px;
+  height: 40px;
+  margin-bottom: 0.5em;
+}
+
+/* -- Cat -- */
+
 .cat {
   position: fixed;
   top: 340px;
   left: 75px;
   width: 200px;
   height: 200px;
-  /*-webkit-box-shadow: 10px 100px 121px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 100px 121px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 100px 121px 0px rgba(0,0,0,0.75);*/
+  z-index: 2;
 }
 
 .cat:active {
@@ -54,6 +99,41 @@ body {
     transform: translate3d(4px, 0, 0);
   }
 }
+
+.cat.backflip {
+  animation-name: backflip;
+  animation-duration: 1s;
+}
+
+@keyframes backflip {
+  0%, 100% {
+    transform: translate3d(0,0,0) rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  69% {
+    transform: translate3d(0, -200px, 0) rotate(180deg);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translate3d(0,0,0) rotate(360deg);
+  }
+}
+
+/* -- Ball -- */
+
+.ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  background: rgba(248,80,50,1);
+  background: radial-gradient(ellipse at center, rgba(248,80,50,1) 0%, rgba(248,75,45,1) 5%, rgba(246,41,12,1) 40%, rgba(240,47,23,1) 51%, rgba(219,54,40,1) 61%, rgba(241,111,92,1) 89%, rgba(241,111,92,1) 100%);
+}
+
+/* -- Button -- */
 
 .button {
   width: 25%;
@@ -83,6 +163,8 @@ body {
   position: relative;
   top: 1px;
 }
+
+/* -- Conversation messages -- */
 
 .message-container {
   box-sizing: border-box;
@@ -128,6 +210,8 @@ body {
   border-top: 20px solid white;
 }
 
+/* -- Call to action -- */
+
 .callToAction {
   width: 300px;
   height: 548px;
@@ -162,66 +246,4 @@ body {
   border-radius: 8px;
   border: 2px solid black;
   display: block;
-}
-
-.welcomeScreen {
-  width: 300px;
-  height: 548px;
-  z-index: 1;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: antiquewhite;
-  border-radius: 10px;
-  -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
-  -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
-  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
-}
-
-.welcomeImage {
-  width: 280px;
-  height: 280px;
-  position: relative;
-  top: 8px;
-  left: 8px;
-  border-radius: 8px;
-  border: 2px solid black;
-  display: block;
-}
-
-.welcomeInput {
-  font-size: 2em;
-  width: 250px;
-  height: 40px;
-  margin-bottom: 0.5em;
-}
-
-.ball {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: rgba(248,80,50,1);
-  background: radial-gradient(ellipse at center, rgba(248,80,50,1) 0%, rgba(248,75,45,1) 5%, rgba(246,41,12,1) 40%, rgba(240,47,23,1) 51%, rgba(219,54,40,1) 61%, rgba(241,111,92,1) 89%, rgba(241,111,92,1) 100%);
-}
-
-.cat.backflip {
-  animation-name: backflip;
-  animation-duration: 1s;
-}
-
-@keyframes backflip {
-  0%, 100% {
-    transform: translate3d(0,0,0) rotate(0deg);
-    animation-timing-function: ease-out;
-  }
-  69% {
-    transform: translate3d(0, -200px, 0) rotate(180deg);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translate3d(0,0,0) rotate(360deg);
-  }
 }
