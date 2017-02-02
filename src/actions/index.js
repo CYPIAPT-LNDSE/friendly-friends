@@ -1,4 +1,3 @@
-
 export const SET_CURRENT_STATE = "SET_CURRENT_STATE";
 export const INITIATE_CONVERSATION = "INITIATE_CONVERSATION";
 
@@ -18,9 +17,12 @@ function initiateConversation(value) {
   };
 }
 
-
+function startPlaying() {
+  return setAction("playing", null);
+}
 
 export default {
   setAction,
-  initiateConversation
+  initiateConversation,
+  startPlaying
 };
