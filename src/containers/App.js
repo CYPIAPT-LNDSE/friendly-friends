@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import actions from "../actions";
 
 const mapStateToProps = (state) => {
-  let callToAction, message = null;
+  let callToAction, message = null, welcome = false;
   switch(state.action.status) {
     case "message":
       message = state.messages[state.action.value];
@@ -11,12 +11,16 @@ const mapStateToProps = (state) => {
     case "cta":
       callToAction = state.callToAction[state.action.value];
       break;
+    case "welcome":
+      welcome = true;
+      break;
     default:
       break;
   }
   return {
     message,
-    callToAction
+    callToAction,
+    welcome
   };
 };
 
