@@ -4,7 +4,8 @@
     "responses": [
       { "text": "I'm feeling pretty good! 😀", "action": "message", "value": "2" },
       { "text": "I feel a bit nervous 😟", "action": "message", "value": "3" },
-      { "text": "I feel sad 😞", "action": "message", "value": "9" }
+      { "text": "I feel sad 😞", "action": "message", "value": "9" },
+      { "text": "I find it hard to make friends", "action": "message", "value": "13" }
     ]
   },
   "2": {
@@ -78,6 +79,19 @@
     "text": "Meeowww",
     "responses": [
       { "text": "awww", "action": "idle", "value": null }
+    ]
+  },
+  "13": {
+    "text": "Oh no! You seem pretty cool to me, but making friends can be hard. Would you like me to tell you some of my special tips?",
+    "responses": [
+      { "text": "Yes please!", "action": "message", "value": "14" },
+      { "text": "No, I'm ok", "action": "message", "value": "8" }
+    ]
+  },
+  "14": {
+    "text": "Cool! Try not to be afraid.\nMost people are nice and want you to like them 😊.\nTry asking them about themselves and what they like.\nI hope this helps!",
+    "responses": [
+      { "text": "Thanks!", "action": "idle", "value": null }
     ]
   }
 }
