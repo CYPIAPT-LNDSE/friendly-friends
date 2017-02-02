@@ -1,5 +1,5 @@
-import Menu from '../components/Menu.js';
-import { connect } from 'react-redux';
+import Menu from "../components/Menu.js";
+import { connect } from "react-redux";
 import actions from "../actions";
 
 const mapStateToProps = (state) => {
@@ -12,6 +12,9 @@ const mapDispatchToProps = (dispatch) => {
       switch(label) {
         case 'talk':
           dispatch(actions.initiateConversation(1));
+          break;
+        case "play":
+          dispatch(actions.startPlaying());
           break;
         default:
           return;
