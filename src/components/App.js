@@ -16,12 +16,16 @@ class App extends Component {
     this.makeBounce = this.makeBounce.bind(this);
   }
   makeBounce() {
-    /* HACK ATTACK */
     if(this.state.isBouncing) { return; }
     this.setState({ isBouncing: true });
-    window.setTimeout(() => {
+    const timeoutID = window.setTimeout(() => {
       this.setState({ isBouncing: false });
     }, 1000);
+    this.setState({ timeoutID });
+  }
+  componentWillUnmount() {
+    /* Won't throw an exception even if timeoutID is undefined */
+    window.clearTimeout(this.state.timeoutID);
   }
   render() {
     const { message, callToAction, updateMessage, isPlaying, initiateConversation } = this.props;
