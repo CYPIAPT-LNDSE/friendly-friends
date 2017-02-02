@@ -8,13 +8,13 @@ import '../styles/App.css';
 
 class App extends Component {
   render() {
-    const { message, callToAction, updateMessage } = this.props;
+    const { message, callToAction, updateMessage, initiateConversation } = this.props;
     return (
       <div className='container'>
         {callToAction && <CallToAction {...callToAction} updateMessage={updateMessage}/>}
         <Menu />
         {message && <Message message={message} updateMessage={updateMessage}/>}
-        <Cat />
+        <Cat initiateConversation={initiateConversation} />
       </div>
     );
   }
