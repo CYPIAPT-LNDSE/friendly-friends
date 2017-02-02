@@ -39,6 +39,7 @@ class App extends Component {
         {message && <Message username={username} message={message} updateMessage={updateMessage}/>}
         <Cat isBouncing={isBouncing} initiateConversation={initiateConversation}/>
         {isPlaying && <Ball isBouncing={isBouncing} handleClick={this.makeBounce}/>}
+        <div className="background-stripes"></div>
       </div>
     );
   }
