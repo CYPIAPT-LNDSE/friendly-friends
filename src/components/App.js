@@ -6,7 +6,6 @@ import Message from "./Message.js";
 import CallToAction from "./CallToAction.js";
 import WelcomeScreen from "./WelcomeScreen.js"
 import Ball from "./Ball.js";
-import "../styles/App.css";
 
 class App extends Component {
   constructor(props) {
