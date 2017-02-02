@@ -30,40 +30,6 @@ body {
   height: 200px;
 }
 
-/* -- Welcome screen -- */
-
-.welcomeScreen {
-  width: 300px;
-  height: 548px;
-  z-index: 1;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: antiquewhite;
-  border-radius: 10px;
-  -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
-  -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
-  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
-}
-
-.welcomeImage {
-  width: 280px;
-  height: 280px;
-  position: relative;
-  top: 8px;
-  left: 8px;
-  border-radius: 8px;
-  border: 2px solid black;
-  display: block;
-}
-
-.welcomeInput {
-  font-size: 2em;
-  width: 250px;
-  height: 40px;
-  margin-bottom: 0.5em;
-}
-
 /* -- Cat -- */
 
 .cat {
@@ -129,6 +95,7 @@ body {
   bottom: 20px;
   right: 20px;
   z-index: 2;
+  cursor: pointer;
   background: rgba(248,80,50,1);
   background: radial-gradient(ellipse at center, rgba(248,80,50,1) 0%, rgba(248,75,45,1) 5%, rgba(246,41,12,1) 40%, rgba(240,47,23,1) 51%, rgba(219,54,40,1) 61%, rgba(241,111,92,1) 89%, rgba(241,111,92,1) 100%);
 }
@@ -150,11 +117,12 @@ body {
   text-align: center;
   font-weight: bold;
   padding: 6px 0;
+  margin: 1em 2em;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffee66;
 }
 
-.button: hover {
+.button:hover {
   background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
   background-color: #ffab23;
 }
@@ -171,6 +139,8 @@ body {
   width: 320px;
   height: 300px;
   position: fixed;
+  z-index: 10;
+
 }
 
 .message {
@@ -182,6 +152,7 @@ body {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
 }
 
 .message .question {
@@ -192,8 +163,12 @@ body {
 .message .answer {
   font-family: sans-serif;
   font-size: 1.15em;
-  font-style: italic;
   cursor: pointer;
+  text-align: left;
+}
+
+.message .answer:hover {
+  color: #2989d8;
 }
 
 .message:after {
@@ -210,12 +185,12 @@ body {
   border-top: 20px solid white;
 }
 
-/* -- Call to action -- */
+/* -- Modal -- */
 
-.callToAction {
+.modal {
   width: 300px;
   height: 548px;
-  z-index: 1;
+  z-index: 999;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -224,6 +199,39 @@ body {
   -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
   box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.modal--image {
+  width: 100%;
+  height: 280px;
+  margin: auto;
+  position: relative;
+  border-radius: 8px;
+  border: 2px solid #ccc0af;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* -- Welcome screen -- */
+
+.welcome .form--input {
+  font-size: 2em;
+  width: 250px;
+  height: 40px;
+  margin-bottom: 0.5em;
+}
+
+.welcome--text {
+  font-size: 1.4em;
+}
+
+/* -- Call to action -- */
+
+.callToAction .callToAction--button {
+  cursor: pointer;
+  font-style: normal;
 }
 
 .callToAction p {
@@ -235,15 +243,4 @@ body {
 .callToAction a {
   font-family: sans-serif;
   font-size: 1.3em;
-}
-
-.ctaImage {
-  width: 280px;
-  height: 280px;
-  position: relative;
-  top: 8px;
-  left: 8px;
-  border-radius: 8px;
-  border: 2px solid black;
-  display: block;
 }
