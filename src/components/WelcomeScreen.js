@@ -24,7 +24,7 @@ class WelcomeScreen extends React.Component {
             name="name"
             className="form--input"
             ref={(input) => this.input = input} />
-          <button type="submit" label="Submit">Submit</button>
+          <button type="submit" label="Submit">Go!</button>
         </form>
       </div>
     );

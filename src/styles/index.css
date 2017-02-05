@@ -8,10 +8,20 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+.clickable:hover {
+  color: #2989d8;
+}
+
 .container {
   width: 320px;
-  height: 568px;
+  height: 100vh;
+  max-height: 600px;
   position: relative;
+  margin: 0 auto;
   background: #2989d8;
   background: -moz-linear-gradient(top,  #2989d8 0%, #1e5799 68%, #207cca 68%, #c1a666 68%, #70592b 68%, #b29f62 100%);
   background: -webkit-linear-gradient(top,  #2989d8 0%,#1e5799 68%,#207cca 68%,#c1a666 68%,#70592b 68%,#b29f62 100%);
@@ -31,13 +41,18 @@ body {
 
 /* -- Cat -- */
 
-.cat {
-  position: fixed;
-  top: 340px;
-  left: 75px;
-  width: 200px;
-  height: 200px;
+.cat-holder {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 320px;
   z-index: 2;
+}
+
+.cat {
+  margin: 0 auto;
+  width: 80%;
+  padding-left: 50px; /* to make the cat's body look more centred */
 }
 
 .cat:active {
@@ -91,7 +106,7 @@ body {
   height: 40px;
   border-radius: 50%;
   position: absolute;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   z-index: 2;
   cursor: pointer;
@@ -166,10 +181,6 @@ body {
   text-align: left;
 }
 
-.message .answer:hover {
-  color: #2989d8;
-}
-
 .message:after {
   content: '';
   display: block;
@@ -188,7 +199,8 @@ body {
 
 .modal {
   width: 300px;
-  height: 548px;
+  height: 80vh;
+  max-height: 570px;
   z-index: 999;
   position: absolute;
   top: 10px;
@@ -203,8 +215,7 @@ body {
 }
 
 .modal--image {
-  width: 100%;
-  height: 280px;
+  width: 80%;
   margin: auto;
   position: relative;
   border-radius: 8px;
@@ -216,10 +227,15 @@ body {
 /* -- Welcome screen -- */
 
 .welcome .form--input {
-  font-size: 2em;
-  width: 250px;
+  font-size: 1.5em;
+  width: 80%;
   height: 40px;
-  margin-bottom: 0.5em;
+  margin: 0 auto .5em;
+  display: block;
+}
+
+.welcome button {
+  font-size: 1.2em;
 }
 
 .welcome--text {
@@ -231,12 +247,14 @@ body {
 .callToAction .callToAction--button {
   cursor: pointer;
   font-style: normal;
+  display: inline-block;
 }
 
-.callToAction p {
+.callToAction--text {
   font-family: sans-serif;
   font-size: 1.15em;
   font-style: italic;
+  margin: 1em auto;
 }
 
 .callToAction a {
