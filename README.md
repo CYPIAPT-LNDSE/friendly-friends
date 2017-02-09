@@ -31,3 +31,15 @@ The app is currently an early prototype designed to demonstrate the concept. Our
 * More nuanced conversation paths (including content written by mental healthcare professionals)
 
 * More personalisation (e.g. cat and room colours)
+
+## Tech stack
+
+### Current
+
+* Front-end: React, Redux, animate.css
+
+* Back-end: null
+
+### MVP
+
+* Postgres DB with Hapi.js server to store previous interactions
